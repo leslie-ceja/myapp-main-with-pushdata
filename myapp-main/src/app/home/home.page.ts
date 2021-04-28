@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from'@angular/router'
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,11 @@ import { ActivatedRoute, Router } from'@angular/router'
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  
+  index;
   data;
   lists = ['Homework','Groccery List','Chores'];
 
-  constructor(private router: Router, private route:ActivatedRoute) {
+  constructor(private router: Router, private route:ActivatedRoute, private dataService:DataService) {
     this.route.queryParams.subscribe(info =>{
       if(info && info.myData){
         this.data = this.route.snapshot.data['myData']
@@ -30,7 +31,8 @@ export class HomePage {
   }
 
   gotoList(){
-    this.router.navigate(['/listview']);
+    this.dataService.setData(2, this.index)
+    this.router.navigateByUrl('listview/2');
   }
 
   ngOnInit() {
