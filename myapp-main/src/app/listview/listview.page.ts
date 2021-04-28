@@ -11,7 +11,7 @@ export class ListviewPage implements OnInit {
   
   tasks: Task[] = [
     {
-    name: 'Parallel Programing Presentation',
+    name: 'Parallel Programing HW5',
     isChecked: false
     },
     {
