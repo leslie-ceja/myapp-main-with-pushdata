@@ -35,6 +35,13 @@ const routes: Routes = [
     path: 'listview',
     loadChildren: () => import('./listview/listview.module').then( m => m.ListviewPageModule)
   },
+  {//NEW ADDITION HERE!
+    path: 'listview/:id',
+    resolve:{
+      myData: ResolverService
+    },
+    loadChildren: () => import('./listview/listview.module').then( m => m.ListviewPageModule)
+  },
 ];
 
 @NgModule({
