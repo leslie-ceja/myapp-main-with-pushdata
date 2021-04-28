@@ -32,6 +32,7 @@ export class HomePage {
 
   gotoList(){
     this.dataService.setData(2, this.index)
+    console.log(this.index)
     this.router.navigateByUrl('listview/2');
   }
 
