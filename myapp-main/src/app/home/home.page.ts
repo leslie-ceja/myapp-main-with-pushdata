@@ -29,6 +29,8 @@ export class HomePage {
     this.router.navigate(['/newlist']);
   }
 
+  gotoList(){}
+
   ngOnInit() {
     if(this.route.snapshot.data['myData']){
       this.data = this.route.snapshot.data['myData']
