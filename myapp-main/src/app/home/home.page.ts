@@ -29,7 +29,9 @@ export class HomePage {
     this.router.navigate(['/newlist']);
   }
 
-  gotoList(){}
+  gotoList(){
+    this.router.navigate(['/listview']);
+  }
 
   ngOnInit() {
     if(this.route.snapshot.data['myData']){

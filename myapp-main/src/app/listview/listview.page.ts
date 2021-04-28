@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListviewPage implements OnInit {
 
+  title ="";
+  public form = [
+    {val:"", isChecked: false}
+  ];
+  
   constructor() { }
 
   ngOnInit() {
