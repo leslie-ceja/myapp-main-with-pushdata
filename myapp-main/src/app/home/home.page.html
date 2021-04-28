@@ -18,7 +18,7 @@
 <ion-content [fullscreen]="true" >
   
   <ion-list>
-    <ion-item-sliding *ngFor="let list of lists">
+    <ion-item-sliding *ngFor="let list of lists; let i = index">
       <ion-item button (click)="gotoList()">
         <ion-icon name="reader-outline"></ion-icon>
         {{list}}
