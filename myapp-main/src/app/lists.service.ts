@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { receiveMessageOnPort } from 'node:worker_threads';
+import { ActionSheetController } from '@ionic/angular';
 import { Task } from './listview/task.model';
 
 @Injectable({
@@ -9,11 +9,23 @@ export class ListsService {
 
   private tasks: Task[] = [
     {
+    id:"Homework",
     name: 'Parallel Programing HW5',
     isChecked: false
     },
     {
+      id:"Homework",
       name: 'Software Engineering Final',
+      isChecked: false
+    },
+    {
+      id:"Groccery List",
+      name: 'Eggs',
+      isChecked: false
+    },
+    {
+      id:"Groccery List",
+      name: 'Bread',
       isChecked: false
     }
   ];
