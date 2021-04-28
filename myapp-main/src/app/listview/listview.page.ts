@@ -18,6 +18,7 @@ export class ListviewPage implements OnInit {
   ngOnInit() {
     if(this.route.snapshot.data['myData']){
       this.title = this.route.snapshot.data['myData']
+      console.log(this.title);
     }
   }
 
