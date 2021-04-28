@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'newlist',
     loadChildren: () => import('./newlist/newlist.module').then( m => m.NewlistPageModule)
   },
+  {
+    path: 'listview',
+    loadChildren: () => import('./listview/listview.module').then( m => m.ListviewPageModule)
+  },
 ];
 
 @NgModule({
