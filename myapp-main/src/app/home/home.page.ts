@@ -33,7 +33,8 @@ export class HomePage {
   gotoList(i){
     this.dataService.setData(2, i)
     console.log("Hello");
-    console.log(i);
+    var x =i;
+    console.log(x);
     this.router.navigateByUrl('listview/2');
   }
 
