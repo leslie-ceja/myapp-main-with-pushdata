@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <ion-item>
+    <ion-input required="true" placeholder="Username" type="text"></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-item>
+    <ion-input required="true" placeholder="Password" type="Password"></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-item>
+    <ion-input required="true" placeholder="Name" type="text"></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-item>
+    <ion-input required="true" placeholder="Email" inputmode="email"></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-item>
+    <ion-input required="true" placeholder="Phone Number" inputmode="tel"></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-button (click)="gotoHomePage()"color="secondary" expand="block">Create Account</ion-button>
+</ion-content>

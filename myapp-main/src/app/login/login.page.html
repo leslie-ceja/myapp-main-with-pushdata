@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="secondary">
+      taskIt
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background" class="ion-padding ion-text-center">
+  <ion-card>
+    <img src="../../assets/todo_list_logo_cropped.png" alt="ion">
+  </ion-card>
+
+  <br>
+  <ion-item>
+    <ion-input placeholder="Username" type="text"></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-item>
+    <ion-input placeholder="Password" type="Password"></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-button (click)="gotoHomePage()" expand="block">Login</ion-button>
+  <br>
+  <ion-label class="ion-padding">Don't have an account?</ion-label>
+  <ion-button (click)="gotoNewAccountPage()" strong="true" fill="clear">Sign up</ion-button>
+  
+</ion-content>
