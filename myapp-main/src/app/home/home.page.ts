@@ -31,10 +31,10 @@ export class HomePage {
   }
 
   gotoList(i){
-    this.dataService.setData(2, i)
+    this.data.push(i);
+    this.dataService.setData(2, this.data)
     console.log("Hello");
-    var x =i;
-    console.log(x);
+    console.log(this.data);
     this.router.navigateByUrl('listview/2');
   }
 
