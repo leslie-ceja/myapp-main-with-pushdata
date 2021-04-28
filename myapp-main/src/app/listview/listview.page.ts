@@ -13,7 +13,13 @@ export class ListviewPage implements OnInit {
     {val:"", isChecked: false}
   ];
   
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute) { 
+    this.route.queryParams.subscribe(info =>{
+      if(info && info.myData){
+        this.title = this.route.snapshot.data['myData']
+      }
+    });
+  }
 
   ngOnInit() {
     if(this.route.snapshot.data['myData']){
