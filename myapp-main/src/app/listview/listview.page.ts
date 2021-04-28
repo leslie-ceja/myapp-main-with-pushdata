@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from'@angular/router';
-import { ListService } from './lists.service';
+import { ListsService } from '../lists.service';
+import { Task } from './task.model'
 
 @Component({
   selector: 'app-listview',
@@ -14,13 +15,11 @@ export class ListviewPage implements OnInit {
     {val:"", isChecked: false}
   ];
   
-  constructor(private route:ActivatedRoute, private listService:ListService) { }
+  tasks: Task[];
+  constructor(private route:ActivatedRoute, private listsService:ListsService) { }
 
   ngOnInit() {
-    if(this.route.snapshot.data['myData']){
-      this.title = this.route.snapshot.data['myData']
-      console.log(this.title);
-    }
+    this.tasks = this.listsService.getAllTasks();
   }
 
 }
