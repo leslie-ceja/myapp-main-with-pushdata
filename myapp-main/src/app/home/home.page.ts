@@ -9,7 +9,7 @@ import { DataService } from '../data.service';
 })
 export class HomePage {
   index;
-  data;
+  data = [];
   lists = ['Homework','Groccery List','Chores'];
 
   constructor(private router: Router, private route:ActivatedRoute, private dataService:DataService) {
