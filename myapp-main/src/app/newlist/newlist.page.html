@@ -6,10 +6,10 @@
 
 <ion-content class="ion-padding">
   <ion-item>
-    <ion-input required="true" placeholder="List Name"></ion-input>
+    <ion-input type="text" required="true" placeholder="List Name" [(ngModel)]="input"></ion-input>
   </ion-item>
 
-  <ion-button (click)="gotoHomePage()">Done</ion-button>
+  <ion-button (click)="passData()">Done</ion-button>
   
   
 </ion-content>
