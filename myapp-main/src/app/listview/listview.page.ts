@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from'@angular/router'
 
 @Component({
   selector: 'app-listview',
@@ -6,15 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listview.page.scss'],
 })
 export class ListviewPage implements OnInit {
-
-  title ="";
+  
+  title;
   public form = [
     {val:"", isChecked: false}
   ];
   
-  constructor() { }
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
+    if(this.route.snapshot.data['myData']){
+      this.title = this.route.snapshot.data['myData']
+    }
   }
 
 }
