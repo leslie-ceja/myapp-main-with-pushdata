@@ -9,7 +9,7 @@ import { DataService } from '../data.service';
 })
 export class HomePage {
   index;
-  data = [];
+  data;
   lists = ['Homework','Groccery List','Chores'];
 
   constructor(private router: Router, private route:ActivatedRoute, private dataService:DataService) {
@@ -31,10 +31,9 @@ export class HomePage {
   }
 
   gotoList(i){
-    this.data.push(i);
-    this.dataService.setData(2, this.data)
+    this.dataService.setData(2, i)
     console.log("Hello");
-    console.log(this.data);
+    console.log(i);
     this.router.navigateByUrl('listview/2');
   }
 
