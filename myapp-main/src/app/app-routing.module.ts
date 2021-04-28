@@ -1,9 +1,17 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ResolverService } from './resolver.service';
 
 const routes: Routes = [
   {
     path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {//NEW ADDITION HERE!
+    path: 'home/:id',
+    resolve:{
+      myData: ResolverService
+    },
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
