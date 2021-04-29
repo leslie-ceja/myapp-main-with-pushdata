@@ -42,7 +42,8 @@ export class NewtaskPage implements OnInit {
     picker.onDidDismiss().then(async data => {
       let col = await picker.getColumn('reminder');
       console.log('col:', col);
-      this.reminder = col.options[col.selectedIndex].text;
+      this.reminder = col.options[col.selectedIndex].value;//can grab text or value
+      console.log(this.reminder);
     });
   }
 
