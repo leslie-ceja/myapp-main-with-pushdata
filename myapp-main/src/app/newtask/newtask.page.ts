@@ -1,6 +1,9 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { PickerController } from '@ionic/angular';
 import { PickerOptions } from '@ionic/core'
+import { Task } from '../listview/task.model';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-newtask',
@@ -8,11 +11,15 @@ import { PickerOptions } from '@ionic/core'
   styleUrls: ['./newtask.page.scss'],
 })
 export class NewtaskPage implements OnInit {
+  title= '';
   date = '';//NOT SURE IF THIS WORKS?
+  name = '';
   myDate: String = new Date().toISOString();
   remindertext='';
   remindervalue= 0;
-  constructor(private pickerCtrl:PickerController) { }
+
+
+  constructor(private pickerCtrl:PickerController, private dataService:DataService) { }
 
   async showPicker(){
     let options:PickerOptions ={
@@ -49,7 +56,15 @@ export class NewtaskPage implements OnInit {
     });
   }
   gotoListView(){
-    
+    this.title = this.dataService.getData(2);
+    let newtask: Task = {
+      id: this.title,//need to get id
+      name: this.name,
+      date: this.date,
+      reminder: this.remindervalue ,
+      isChecked: false,
+    }
+    console.log(newtask);
   }
   ngOnInit() {
     //console.log(this.myDate);
