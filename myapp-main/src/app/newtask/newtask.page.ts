@@ -73,6 +73,9 @@ export class NewtaskPage implements OnInit {
     this.router.navigate(['/listview']);
   }
   ngOnInit() {
+    this.name = '';
+    this.date = '';
+    this.remindervalue=0;
     //console.log(this.myDate);
   }
 
