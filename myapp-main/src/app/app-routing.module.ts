@@ -42,6 +42,10 @@ const routes: Routes = [
     },
     loadChildren: () => import('./listview/listview.module').then( m => m.ListviewPageModule)
   },
+  {
+    path: 'newtask',
+    loadChildren: () => import('./newtask/newtask.module').then( m => m.NewtaskPageModule)
+  },
 ];
 
 @NgModule({
