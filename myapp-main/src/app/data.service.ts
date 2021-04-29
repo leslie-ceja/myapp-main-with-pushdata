@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class DataService {
 
   private data = [];
-  list= ['Homework','Shopping','Chores'];
+  list= ['Homework','Groccery List','Shopping','Chores'];
 
   constructor() { }
 
