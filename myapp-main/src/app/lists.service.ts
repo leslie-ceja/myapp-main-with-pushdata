@@ -12,21 +12,29 @@ export class ListsService {
     {
     id:"Homework",
     name: 'Parallel Programing HW5',
+    date: '',
+    reminder: 0,
     isChecked: false
     },
     {
       id:"Homework",
       name: 'Software Engineering Final',
+      date: '',
+      reminder: 0,
       isChecked: false
     },
     {
       id:"Groccery List",
       name: 'Eggs',
+      date: '',
+      reminder: 0,
       isChecked: false
     },
     {
       id:"Groccery List",
       name: 'Bread',
+      date: '',
+      reminder: 0,
       isChecked: false
     }
   ];
