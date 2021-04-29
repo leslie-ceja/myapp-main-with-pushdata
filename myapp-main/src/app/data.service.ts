@@ -22,4 +22,7 @@ export class DataService {
   getallList(){
     return this.list;
   }
+  remove(i){
+    this.list.splice(i,1);
+  }
 }
