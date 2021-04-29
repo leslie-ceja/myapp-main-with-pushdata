@@ -21,7 +21,8 @@ export class ListviewPage implements OnInit {
 
   ngOnInit() {
     this.tasks = this.listsService.getAllTasks();
-    for(const task of this.tasks) {
+    for(let task of this.tasks) {
+      console.log(task);
       if(task.id === this.title){
         this.current.push(task);
       }
