@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewtaskPage implements OnInit {
 
+  myDate: String = new Date().toISOString();
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.myDate);
   }
 
 }
