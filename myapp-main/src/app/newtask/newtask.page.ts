@@ -48,7 +48,7 @@ export class NewtaskPage implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.myDate);
+    //console.log(this.myDate);
   }
 
 }
