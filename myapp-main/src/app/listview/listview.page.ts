@@ -12,6 +12,7 @@ import { DataService } from '../data.service';
 export class ListviewPage implements OnInit {
 
   title = "";
+  check : boolean;
   public form = [
     {val:"", isChecked: false}
   ];
@@ -39,6 +40,9 @@ export class ListviewPage implements OnInit {
     }
     //CREATE A NEW LIST AND ONLY ADD ITEMS WITH CERTAIN ID EX. SHCOOL
     //DISPLAY THAT LIST
+  }
+  checked(task){
+    this.listsService.updateChecked(task, this.check);
   }
 
 }
