@@ -8,10 +8,10 @@ import { PickerOptions } from '@ionic/core'
   styleUrls: ['./newtask.page.scss'],
 })
 export class NewtaskPage implements OnInit {
-
+  date = '';//NOT SURE IF THIS WORKS?
   myDate: String = new Date().toISOString();
   remindertext='';
-  remindervalue='';
+  remindervalue= 0;
   constructor(private pickerCtrl:PickerController) { }
 
   async showPicker(){
@@ -28,6 +28,7 @@ export class NewtaskPage implements OnInit {
       columns: [
         {name: 'reminder',
         options: [
+          {text: 'None', value: '0'},
           {text: '15 minutes before', value: '15'},
           {text: '30 minutes before', value: '30'},
           {text: '45 minutes before', value: '45'},
@@ -47,7 +48,9 @@ export class NewtaskPage implements OnInit {
       this.remindertext = col.options[col.selectedIndex].text;
     });
   }
-
+  gotoListView(){
+    
+  }
   ngOnInit() {
     //console.log(this.myDate);
   }
