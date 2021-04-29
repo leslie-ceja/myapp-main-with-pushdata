@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>newtask</ion-title>
+    <ion-title>New Task</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-item>
+    <ion-input type="text" required="true" placeholder="Task Name" [(ngModel)]="input"></ion-input>
+  </ion-item>
 
 </ion-content>
