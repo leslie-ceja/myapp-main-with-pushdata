@@ -9,7 +9,7 @@ import { ListsService } from '../lists.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  index;
+  index: number;
   data;
   lists = ['Homework','Groccery List','Chores'];
 
