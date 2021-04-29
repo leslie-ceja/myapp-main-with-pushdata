@@ -10,16 +10,22 @@ import { Task } from './task.model'
 })
 export class ListviewPage implements OnInit {
 
-  title;
+  title = "School";
   public form = [
     {val:"", isChecked: false}
   ];
   
   tasks: Task[];
+  current: Task[];
   constructor(private route:ActivatedRoute, private listsService:ListsService) { }
 
   ngOnInit() {
     this.tasks = this.listsService.getAllTasks();
+    for(const task of this.tasks) {
+      if(task.id === this.title){
+        this.current.push(task);
+      }
+    }
     //CREATE A NEW LIST AND ONLY ADD ITEMS WITH CERTAIN ID EX. SHCOOL
     //DISPLAY THAT LIST
   }

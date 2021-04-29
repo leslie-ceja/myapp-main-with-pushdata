@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from'@angular/router'
 import { DataService } from '../data.service';
+import { ListsService } from '../lists.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomePage {
   data;
   lists = ['Homework','Groccery List','Chores'];
 
-  constructor(private router: Router, private route:ActivatedRoute, private dataService:DataService) {
+  constructor(private router: Router, private route:ActivatedRoute, private dataService:DataService, private listsService:ListsService) {
     this.route.queryParams.subscribe(info =>{
       if(info && info.myData){
         this.data = this.route.snapshot.data['myData']
@@ -43,4 +44,6 @@ export class HomePage {
       this.lists.push(this.data)//NEW???
     }
   }
+
+  
 }
