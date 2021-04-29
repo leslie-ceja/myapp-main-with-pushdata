@@ -24,8 +24,9 @@ export class HomePage {
 
   
   removeList(i) {
-    console.log('List removed')
+    console.log(i);
     this.lists.splice(i,1);
+    this.dataService.remove(i);
   }
 
   gotoNewListPage() {
