@@ -20,6 +20,8 @@ export class ListviewPage implements OnInit {
 
   ngOnInit() {
     this.tasks = this.listsService.getAllTasks();
+    //CREATE A NEW LIST AND ONLY ADD ITEMS WITH CERTAIN ID EX. SHCOOL
+    //DISPLAY THAT LIST
   }
 
 }
