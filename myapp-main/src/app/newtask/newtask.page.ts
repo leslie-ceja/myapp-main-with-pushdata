@@ -27,12 +27,12 @@ export class NewtaskPage implements OnInit {
       columns: [
         {name: 'reminder',
         options: [
-          {text: '15', value: '15'},
-          {text: '30', value: '30'},
-          {text: '45', value: '45'},
-          {text: '1', value: '1'},
-          {text: '2', value: '2'},
-          {text: '3', value: '3'}
+          {text: '15 minutes before', value: '15'},
+          {text: '30 minutes before', value: '30'},
+          {text: '45 minutes before', value: '45'},
+          {text: '1 hour before', value: '1'},
+          {text: '2 hours before', value: '2'},
+          {text: '3 hours before', value: '3'}
         ]
         }
       ],

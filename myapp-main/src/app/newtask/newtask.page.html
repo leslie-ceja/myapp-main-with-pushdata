@@ -19,9 +19,9 @@
     <ion-datetime displayFormat="MM/DD/YYYY" [min]="myDate"></ion-datetime>
   </ion-item>
   
-  <ion-item>
+  <ion-item (click)="showPicker()">
     <ion-label position="floating">Reminder</ion-label>
-    
+    <ion-input></ion-input> 
   </ion-item>
 
 </ion-content>
