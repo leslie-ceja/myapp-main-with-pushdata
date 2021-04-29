@@ -12,6 +12,7 @@ export class HomePage {
   
   data;
   lists = ['Homework','Groccery List','Chores'];
+  servicelist;
 
   constructor(private router: Router, private route:ActivatedRoute, private dataService:DataService) {
     this.route.queryParams.subscribe(info =>{
@@ -39,6 +40,7 @@ export class HomePage {
   }
 
   ngOnInit() {
+    this.servicelist = this.dataService.getallList();
     if(this.route.snapshot.data['myData']){
       this.data = this.route.snapshot.data['myData']
       this.lists.push(this.data)//NEW???

@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class DataService {
 
   private data = [];
+  list= ['Homework','Shopping','Chores'];
 
   constructor() { }
 
@@ -14,5 +15,11 @@ export class DataService {
   }
   getData(id){
     return this.data[id];
+  }
+  addList(){
+
+  }
+  getallList(){
+    return this.list;
   }
 }
