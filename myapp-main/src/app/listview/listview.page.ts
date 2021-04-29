@@ -16,7 +16,8 @@ export class ListviewPage implements OnInit {
   ];
   
   tasks: Task[];
-  current: Task[];
+  //current: Task[];
+  current = [];
   constructor(private route:ActivatedRoute, private listsService:ListsService) { }
 
   ngOnInit() {
@@ -24,7 +25,7 @@ export class ListviewPage implements OnInit {
     for(let task of this.tasks) {
       console.log(task);
       if(task.id === this.title){
-        this.current.push(task);
+        this.current.push(task.name);
       }
     }
     //CREATE A NEW LIST AND ONLY ADD ITEMS WITH CERTAIN ID EX. SHCOOL
