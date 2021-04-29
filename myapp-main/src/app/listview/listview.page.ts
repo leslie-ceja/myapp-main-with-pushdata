@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from'@angular/router';
 import { ListsService } from '../lists.service';
 import { Task } from './task.model'
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-listview',
@@ -10,7 +11,7 @@ import { Task } from './task.model'
 })
 export class ListviewPage implements OnInit {
 
-  title = "Homework";
+  title = "";
   public form = [
     {val:"", isChecked: false}
   ];
@@ -18,10 +19,12 @@ export class ListviewPage implements OnInit {
   tasks: Task[];
   //current: Task[];
   current = [];
-  constructor(private route:ActivatedRoute, private listsService:ListsService) { }
+  constructor(private route:ActivatedRoute, private listsService:ListsService, private dataService:DataService) { }
 
   ngOnInit() {
     this.tasks = this.listsService.getAllTasks();
+    this.title = this.dataService.getData(2);
+    console.log(this.title);
     for(let task of this.tasks) {
       console.log(task);
       if(task.id === this.title){
