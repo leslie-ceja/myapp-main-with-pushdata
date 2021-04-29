@@ -10,7 +10,8 @@ import { PickerOptions } from '@ionic/core'
 export class NewtaskPage implements OnInit {
 
   myDate: String = new Date().toISOString();
-  reminder='';
+  remindertext='';
+  remindervalue='';
   constructor(private pickerCtrl:PickerController) { }
 
   async showPicker(){
@@ -42,8 +43,8 @@ export class NewtaskPage implements OnInit {
     picker.onDidDismiss().then(async data => {
       let col = await picker.getColumn('reminder');
       console.log('col:', col);
-      this.reminder = col.options[col.selectedIndex].value;//can grab text or value
-      console.log(this.reminder);
+      this.remindervalue = col.options[col.selectedIndex].value;//can grab text or value
+      this.remindertext = col.options[col.selectedIndex].text;
     });
   }
 
