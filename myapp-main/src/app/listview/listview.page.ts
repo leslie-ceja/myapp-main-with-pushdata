@@ -41,6 +41,9 @@ export class ListviewPage implements OnInit {
     //CREATE A NEW LIST AND ONLY ADD ITEMS WITH CERTAIN ID EX. SHCOOL
     //DISPLAY THAT LIST
   }
-  
+  checked(name){
+    console.log(name);
+    this.listsService.updateChecked(name);
+  }
 
 }
