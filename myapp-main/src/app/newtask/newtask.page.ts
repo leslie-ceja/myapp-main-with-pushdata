@@ -14,7 +14,7 @@ export class NewtaskPage implements OnInit {
   constructor(private pickerCtrl:PickerController) { }
 
   async showPicker(){
-    let options :PickerOptions ={
+    let options:PickerOptions ={
       buttons: [
         {
           text: 'Cancel',
@@ -35,7 +35,7 @@ export class NewtaskPage implements OnInit {
           {text: '3 hours before', value: '3'}
         ]
         }
-      ],
+      ]
     };
     let picker = await this.pickerCtrl.create(options);
     picker.present();
