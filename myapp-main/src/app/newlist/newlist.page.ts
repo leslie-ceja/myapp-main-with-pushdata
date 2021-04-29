@@ -18,12 +18,13 @@ export class NewlistPage implements OnInit {
   }
 
   gotoHomePage() {
+    this.input = '';
     this.router.navigate(['/home']);
   }
 
   passData() {
     this.dataService.addList(this.input);
-
+    this.input = ''; //clear input
     //NOT BEING USED
     this.data.push(this.input);
     this.dataService.setData(1, this.data)
