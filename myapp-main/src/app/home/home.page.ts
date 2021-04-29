@@ -32,9 +32,10 @@ export class HomePage {
   }
 
   gotoList(i){
-    this.dataService.setData(2, i)
+    this.dataService.setData(2, i);
+    let index = i;
     console.log("Hello");
-    console.log(i);
+    console.log(this.index);
     this.router.navigateByUrl('listview/2');
   }
 
@@ -45,5 +46,5 @@ export class HomePage {
     }
   }
 
-  
+
 }
