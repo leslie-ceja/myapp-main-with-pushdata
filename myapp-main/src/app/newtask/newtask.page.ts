@@ -1,9 +1,10 @@
-import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { PickerController } from '@ionic/angular';
 import { PickerOptions } from '@ionic/core'
 import { Task } from '../listview/task.model';
 import { DataService } from '../data.service';
+import { ListsService } from '../lists.service';
+import { Router } from'@angular/router'
 
 @Component({
   selector: 'app-newtask',
@@ -19,7 +20,7 @@ export class NewtaskPage implements OnInit {
   remindervalue= 0;
 
 
-  constructor(private pickerCtrl:PickerController, private dataService:DataService) { }
+  constructor(private router: Router,private pickerCtrl:PickerController, private listsService:ListsService, private dataService:DataService) { }
 
   async showPicker(){
     let options:PickerOptions ={
@@ -65,6 +66,8 @@ export class NewtaskPage implements OnInit {
       isChecked: false,
     }
     console.log(newtask);
+    this.listsService.addItem(newtask);
+    this.router.navigate(['/listview']);
   }
   ngOnInit() {
     //console.log(this.myDate);
