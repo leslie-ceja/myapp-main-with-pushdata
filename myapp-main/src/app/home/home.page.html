@@ -19,7 +19,7 @@
   
   <ion-list>
     <ion-item-sliding *ngFor="let list of lists; let i = index">
-      <ion-item button (click)="gotoList(i)">
+      <ion-item button (click)="gotoList(list)">
         <ion-icon name="reader-outline"></ion-icon>
         {{list}}
       </ion-item>
