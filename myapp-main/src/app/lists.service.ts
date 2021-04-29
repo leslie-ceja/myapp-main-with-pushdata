@@ -7,6 +7,7 @@ import { Task } from './listview/task.model';
 })
 export class ListsService {
 
+  item = 0;
   private tasks: Task[] = [
     {
     id:"Homework",
@@ -39,5 +40,11 @@ export class ListsService {
     return {...this.tasks.find(task => {
       return task.name === name;
     })};//taske copy of properties
+  }
+  setItem(i){
+    this.item = i;
+  }
+  getItem(){
+    return this.item;
   }
 }
