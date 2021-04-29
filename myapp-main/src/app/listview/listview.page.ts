@@ -42,7 +42,9 @@ export class ListviewPage implements OnInit {
     //DISPLAY THAT LIST
   }
   checked(task){
-    this.listsService.updateChecked(task, this.check);
+    console.log(task);
+    console.log(task.check);
+    this.listsService.updateChecked(task, task.check);
   }
 
 }
