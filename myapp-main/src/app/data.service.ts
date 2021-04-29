@@ -16,8 +16,8 @@ export class DataService {
   getData(id){
     return this.data[id];
   }
-  addList(){
-
+  addList(name: string){
+    this.list.push(name);
   }
   getallList(){
     return this.list;
