@@ -70,6 +70,7 @@ export class ListsService {
     console.log(temp);
   }
   remove(i){
+    console.log("remove");
     this.tasks.splice(i,1);
   }
 }
