@@ -24,7 +24,9 @@ export class ListviewPage implements OnInit {
   gotoNewTask(){
     this.router.navigate(['/newtask']);
   }
-
+  backtoHome(){
+    this.router.navigate(['/home']);
+  }
   ngOnInit() {
     this.tasks = this.listsService.getAllTasks();
     this.title = this.dataService.getData(2);
