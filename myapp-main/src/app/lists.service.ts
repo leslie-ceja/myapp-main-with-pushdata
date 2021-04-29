@@ -55,4 +55,8 @@ export class ListsService {
   getItem(){
     return this.item;
   }
+  addItem(item: Task){
+    this.tasks.push(item);
+    console.log(item);
+  }
 }
