@@ -65,7 +65,7 @@ export class ListsService {
       temp.isChecked = true;
     }
     else{
-      temp.isChecked=false;
+      temp.isChecked = false;
     }
     console.log(temp);
   }
