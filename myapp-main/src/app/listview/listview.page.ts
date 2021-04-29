@@ -19,7 +19,11 @@ export class ListviewPage implements OnInit {
   tasks: Task[];
   //current: Task[];
   current = [];
-  constructor(private route:ActivatedRoute, private listsService:ListsService, private dataService:DataService) { }
+  constructor(private router: Router,private route:ActivatedRoute, private listsService:ListsService, private dataService:DataService) { }
+
+  gotoNewTask(){
+    this.router.navigate(['/newtask']);
+  }
 
   ngOnInit() {
     this.tasks = this.listsService.getAllTasks();
