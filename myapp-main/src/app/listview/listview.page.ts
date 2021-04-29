@@ -10,7 +10,7 @@ import { Task } from './task.model'
 })
 export class ListviewPage implements OnInit {
 
-  title = "School";
+  title = "Homework";
   public form = [
     {val:"", isChecked: false}
   ];
