@@ -56,6 +56,9 @@ export class NewtaskPage implements OnInit {
       this.remindertext = col.options[col.selectedIndex].text;
     });
   }
+  backtoListView(){
+    this.router.navigate(['/listview']);
+  }
   gotoListView(){
     this.title = this.dataService.getData(2);
     let newtask: Task = {
