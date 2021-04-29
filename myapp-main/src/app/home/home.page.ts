@@ -11,7 +11,7 @@ import { DataService } from '../data.service';
 export class HomePage {
   
   data;
-  lists = ['Homework','Groccery List','Chores'];
+  lists = ['Homework','Groccery List','Chores'];//NOT BEING USED
   servicelist;
 
   constructor(private router: Router, private route:ActivatedRoute, private dataService:DataService) {
@@ -41,6 +41,7 @@ export class HomePage {
 
   ngOnInit() {
     this.servicelist = this.dataService.getallList();
+    //NOT BEING USED
     if(this.route.snapshot.data['myData']){
       this.data = this.route.snapshot.data['myData']
       this.lists.push(this.data)//NEW???
