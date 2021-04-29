@@ -45,6 +45,8 @@ export class ListviewPage implements OnInit {
     console.log(name);
     this.listsService.updateChecked(name);
   }
-  removeItem(i){}
-
+  removeItem(i){
+    this.listsService.remove(i);
+  }
+  
 }
