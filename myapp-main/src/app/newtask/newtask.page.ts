@@ -76,6 +76,9 @@ export class NewtaskPage implements OnInit {
     this.remindervalue=0;
   }
   ngOnInit() {
+    this.name = '';
+    this.date = '';
+    this.remindervalue=0;
     //console.log(this.myDate);
   }
 
