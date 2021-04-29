@@ -9,7 +9,7 @@ import { ListsService } from '../lists.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  index: number;
+  
   data;
   lists = ['Homework','Groccery List','Chores'];
 
@@ -31,11 +31,10 @@ export class HomePage {
     this.router.navigate(['/newlist']);
   }
 
-  gotoList(i){
+  gotoList(i,index){
     this.dataService.setData(2, i);
-    this.index = i;
     console.log("Hello");
-    console.log(this.index);
+    console.log(index);
     this.router.navigateByUrl('listview/2');
   }
 
