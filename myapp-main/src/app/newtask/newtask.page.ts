@@ -71,11 +71,11 @@ export class NewtaskPage implements OnInit {
     console.log(newtask);
     this.listsService.addItem(newtask);
     this.router.navigate(['/listview']);
-  }
-  ngOnInit() {
     this.name = '';
     this.date = '';
     this.remindervalue=0;
+  }
+  ngOnInit() {
     //console.log(this.myDate);
   }
 
