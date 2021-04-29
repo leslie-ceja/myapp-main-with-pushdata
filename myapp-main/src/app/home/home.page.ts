@@ -31,10 +31,10 @@ export class HomePage {
     this.router.navigate(['/newlist']);
   }
 
-  gotoList(i,index){
+  gotoList(i){
     this.dataService.setData(2, i);
     console.log("Hello");
-    console.log(index);
+    console.log(i);
     this.router.navigateByUrl('listview/2');
   }
 
