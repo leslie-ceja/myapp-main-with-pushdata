@@ -57,6 +57,7 @@ export class NewtaskPage implements OnInit {
     });
   }
   backtoListView(){
+    this.clearInputs();
     this.router.navigate(['/listview']);
   }
   gotoListView(){
@@ -70,15 +71,16 @@ export class NewtaskPage implements OnInit {
     }
     console.log(newtask);
     this.listsService.addItem(newtask);
+    this.clearInputs();
     this.router.navigate(['/listview']);
+  }
+  clearInputs(){
     this.name = '';
     this.date = '';
     this.remindervalue=0;
   }
   ngOnInit() {
-    this.name = '';
-    this.date = '';
-    this.remindervalue=0;
+    this.clearInputs();
     //console.log(this.myDate);
   }
 
