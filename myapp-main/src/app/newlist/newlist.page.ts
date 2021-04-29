@@ -22,6 +22,9 @@ export class NewlistPage implements OnInit {
   }
 
   passData() {
+    this.dataService.addList(this.input);
+
+    //NOT BEING USED
     this.data.push(this.input);
     this.dataService.setData(1, this.data)
     this.router.navigateByUrl('home/1')
