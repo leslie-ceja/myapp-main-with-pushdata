@@ -59,4 +59,9 @@ export class ListsService {
     this.tasks.push(item);
     console.log(item);
   }
+  updateChecked(name, status){
+    let temp = this.getTask(name);
+    temp.isChecked = status;
+    console.log(temp);
+  }
 }
